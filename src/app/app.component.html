@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>{{ title }}</title>
-  <link rel="stylesheet" type="text/css" href="./styles.css">
+  <link rel="stylesheet" type="text/css" href="/src/styles.css">
 </head>
 <body>
   <header>
@@ -18,16 +18,8 @@
   </header>
 
   <main>
-    <div class="poster-grid">
-      <div class="poster" *ngFor="let ad of advertisements">
-        <img [src]="ad.posterImageUrl" alt="Advertisement">
-        <div class="status-bar">
-          <span *ngIf="ad.isOnline">Online Now</span>
-          <span *ngIf="!ad.isOnline">Last Online: {{ ad.lastOnline }}</span>
-          <span>{{ ad.distance }} km away</span>
-        </div>
-      </div>
-    </div>
+    <app-advertisment></app-advertisment>
+
   </main>
 
   <script src="app.js"></script>
