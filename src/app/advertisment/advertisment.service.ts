@@ -1,15 +1,14 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class AdvertiserService {
-  private apiUrl = 'http://localhost:3000/advertisers';
+export class AdvertismentService {
+  constructor(private http: HttpClient) {}
 
-  constructor(private http: HttpClient) { }
-
-  getAdvertisers() {
-    return this.http.get<any[]>(this.apiUrl);
+  getAdvertisers(): Observable<any> { // Update this line
+    return this.http.get<any>('http://localhost:3000/api/accounts');
   }
 }

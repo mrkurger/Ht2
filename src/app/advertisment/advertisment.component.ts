@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AdvertiserService } from './advertisment.service';
+import { AdvertismentService } from './advertisment.service';
 
 @Component({
   selector: 'app-advertisment',
@@ -7,17 +7,14 @@ import { AdvertiserService } from './advertisment.service';
   styleUrls: ['./advertisment.component.css']
 })
 export class AdvertismentComponent implements OnInit {
-  advertisers: any[] = [];
+  advertisements: any[] = [];
 
-  constructor(private advertiserService: AdvertiserService) { }
+  constructor(private advertismentService: AdvertismentService) { }
 
   ngOnInit() {
-    this.advertiserService.getAdvertisers().subscribe(
+    this.advertismentService.getAdvertisers().subscribe(
       (data: any[]) => {
-        this.advertisers = data;
-      },
-      (error) => {
-        console.log('Error fetching advertisers:', error);
+        this.advertisements = data.filter(account => account.accountType === 'advertisers');
       }
     );
   }

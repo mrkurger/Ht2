@@ -1,27 +1,2 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>{{ title }}</title>
-  <link rel="stylesheet" type="text/css" href="/src/styles.css">
-</head>
-<body>
-  <header>
-    <nav>
-      <div class="logo">
-        <a href="/">Cleaning Services</a>
-      </div>
-      <div class="search-box">
-        <input type="text" placeholder="Search advertisers">
-        <!-- Suggestions will be displayed here -->
-      </div>
-    </nav>
-  </header>
-
-  <main>
-    <app-advertisment></app-advertisment>
-
-  </main>
-
-  <script src="app.js"></script>
-</body>
-</html>
+<app-navbar></app-navbar> <!-- This is your header -->
+<router-outlet></router-outlet> <!-- This is where the components for different routes will be injected -->

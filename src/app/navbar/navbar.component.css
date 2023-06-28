@@ -1,0 +1,17 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .logo {
+    order: 1;
+  }
+  
+  .auth-links {
+    order: 2;
+  }
+  
+  .search-box {
+    order: 3;
+  }
+  

@@ -1,0 +1,43 @@
+<form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+    <mat-form-field>
+      <mat-label>Username</mat-label>
+      <input matInput formControlName="username" placeholder="Enter your username">
+      <mat-error *ngIf="registrationForm.controls['username'].hasError('required')">
+        Username is required
+      </mat-error>
+    </mat-form-field>
+  
+    <mat-form-field>
+      <mat-label>Password</mat-label>
+      <input matInput formControlName="password" type="password" placeholder="Enter your password">
+      <mat-error *ngIf="registrationForm.controls['password'].hasError('required')">
+        Password is required
+      </mat-error>
+    </mat-form-field>
+  
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email" placeholder="Enter your email">
+      <mat-error *ngIf="registrationForm.controls['email'].hasError('required')">
+        Email is required
+      </mat-error>
+      <mat-error *ngIf="registrationForm.controls['email'].hasError('email')">
+        Please enter a valid email address
+      </mat-error>
+    </mat-form-field>
+  
+    <mat-form-field>
+      <mat-label>Account Type</mat-label>
+      <mat-select formControlName="accountType">
+        <mat-option value="advertisers">Advertiser</mat-option>
+        <mat-option value="users">User</mat-option>
+      </mat-select>
+      <mat-error *ngIf="registrationForm.controls['accountType'].hasError('required')">
+        Account type is required
+      </mat-error>
+    </mat-form-field>
+  
+    <button mat-raised-button color="primary" type="submit" [disabled]="registrationForm.invalid">
+      Register
+    </button>
+</form>

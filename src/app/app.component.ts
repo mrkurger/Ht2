@@ -1,3 +1,4 @@
+// app.component.ts
 import { Component, OnInit } from '@angular/core';
 import { AdvertismentService } from './advertisment/advertisment.service';
 
@@ -10,14 +11,20 @@ export class AppComponent implements OnInit {
   title = 'Cleaning Services Classified Ads';
   advertisements: any[] = [];
 
-  constructor(private advertismentService: AdvertismentService) { }
+  constructor(private advertismentService: AdvertismentService) {}
 
   ngOnInit() {
-    this.advertismentService.getAdvertisments().subscribe(
+    this.fetchAdvertisers();
+  }
+
+  fetchAdvertisers() {
+    this.advertismentService.getAdvertisers().subscribe(
       (data: any[]) => {
         this.advertisements = data;
+      },
+      (error) => {
+        console.log('Error fetching advertisers:', error);
       }
     );
   }
 }
-

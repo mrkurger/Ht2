@@ -9,10 +9,10 @@ import { AdvertismentService } from './advertisment.service.js';
 export class AdvertismentComponent implements OnInit {
   advertisements: any[] = [];
 
-  constructor(private advertisementService: AdvertismentService) { }
+  constructor(private advertismentService: AdvertismentService) { }
 
   ngOnInit() {
-    this.advertisementService.getAdvertisments().subscribe(
+    this.advertismentService.getAdvertisers().subscribe(
       (data: any[]) => {
         this.advertisements = data;
       }
