@@ -1,0 +1,11 @@
+<div class="poster-grid">
+    <div class="poster" *ngFor="let ad of advertisments">
+      <img [src]="ad.posterImageUrl" alt="Advertisement">
+      <div class="status-bar">
+        <span *ngIf="ad.isOnline">Online Now</span>
+        <span *ngIf="!ad.isOnline">Last Online: {{ ad.lastOnline }}</span>
+        <span>{{ ad.distance }} km away</span>
+      </div>
+    </div>
+  </div>
+  

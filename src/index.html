@@ -1,13 +1,28 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="utf-8">
-  <title>Project</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <title>Cleaning Services Classified Ads</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-  <app-root></app-root>
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="/">Cleaning Services</a>
+      </div>
+      <div class="search-box">
+        <input type="text" placeholder="Search advertisers">
+        <!-- Suggestions will be displayed here -->
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="poster-grid">
+      <!-- Advertisements will be dynamically generated here -->
+    </div>
+  </main>
+
+  <script src="app.js"></script>
 </body>
 </html>

@@ -1,0 +1,49 @@
+.container.hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url('/app/img/300x200.png') no-repeat center center;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    height: 80vh;
+    padding: 5%;
+  }
+  
+  .hero-title {
+    font-size: 3em;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 2em;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .col-md-4 {
+    flex: 0 0 calc(33.333% - 2em);
+    margin: 1em;
+  }
+  
+  .card {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .card img {
+    width: 100%;
+  }
+  
+  .btn-primary {
+    background-color: #e50914;
+    border-color: #e50914;
+  }
+  
+  .btn-primary:hover {
+    background-color: #b20710;
+    border-color: #b20710;
+  }
+  
