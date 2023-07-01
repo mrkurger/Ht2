@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AdvertismentService } from './advertisment.service.js';
 
 @Component({
-  selector: 'app-advertisement',
+  selector: 'app-advertisment',
   templateUrl: './advertisment.component.html',
   styleUrls: ['./advertisment.component.css']
 })

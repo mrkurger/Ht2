@@ -1,17 +1,37 @@
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
 nav {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .logo {
-    order: 1;
-  }
-  
-  .auth-links {
-    order: 2;
-  }
-  
-  .search-box {
-    order: 3;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  order: 1;
+}
+
+.auth-links {
+  order: 2;
+}
+
+.search-box {
+  order: 3;
+}
+
+/* Adjust styles for Angular Material components */
+
+/* Logo */
+.logo a {
+  color: purple;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+/* Auth links */
+.auth-links button {
+  margin-right: 10px;
+}
+
+/* Search box */
+.search-box mat-form-field {
+  margin-left: 10px;
+}

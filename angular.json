@@ -27,8 +27,10 @@
               "src/img"
             ],
             "styles": [
+              "./node_modules/bootstrap/dist/css/bootstrap.css",
               "@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.css"
+              
             ],
             "scripts": []
           },

@@ -1,0 +1,75 @@
+<div class="profile-container">
+    <div class="profile-header">
+      <img class="profile-photo" src="{{ advertiser.profilePhoto }}" alt="Profile Photo">
+      <div class="profile-info">
+        <h2>{{ advertiser.name }}</h2>
+        <p>{{ advertiser.location }}</p>
+        <p>Distance: {{ distance }} km</p>
+        <button (click)="addToFavorites()">Add to Favorites</button>
+      </div>
+    </div>
+    
+    <div class="profile-content">
+      <div class="photo-gallery">
+        <h3>Photo Gallery</h3>
+        <div class="gallery-images">
+          <img *ngFor="let photo of advertiser.photoGallery" [src]="photo" alt="Photo">
+        </div>
+      </div>
+      
+      <div class="video-gallery">
+        <h3>Video Gallery</h3>
+        <div class="gallery-videos">
+          <video *ngFor="let video of advertiser.videoGallery" controls>
+            <source [src]="video" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      
+      <div class="working-hours">
+        <h3>Working Hours</h3>
+        <ul>
+          <li *ngFor="let workingHour of advertiser.workingHours">{{ workingHour }}</li>
+        </ul>
+      </div>
+      
+      <div class="travel-itinerary">
+        <h3>Travel Itinerary for the Next 30 Days</h3>
+        <ul>
+          <li *ngFor="let itinerary of advertiser.travelItinerary">{{ itinerary }}</li>
+        </ul>
+      </div>
+      
+      <div class="services">
+        <h3>Services</h3>
+        <ul>
+          <li *ngFor="let service of advertiser.services">{{ service }}</li>
+        </ul>
+      </div>
+      
+      <div class="bio-section">
+        <h3>Bio</h3>
+        <p>{{ advertiser.bio }}</p>
+      </div>
+      
+      <div class="reviews">
+        <h3>Reviews</h3>
+        <div class="review-item" *ngFor="let review of advertiser.reviews">
+          <p>{{ review.content }}</p>
+          <div class="review-score">
+            <span *ngFor="let _ of [review.score]">&#10084;</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="user-review">
+        <h3>Write a Review</h3>
+        <textarea [(ngModel)]="userReview.content" placeholder="Write your review here"></textarea>
+        <div class="review-score">
+          <span *ngFor="let _ of [userReview.score]">&#10084;</span>
+        </div>
+        <button (click)="submitReview()">Submit Review</button>
+      </div>
+    </div>
+  </div>
+  

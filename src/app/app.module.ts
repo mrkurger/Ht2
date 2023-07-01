@@ -19,7 +19,8 @@ import { HomePageComponent } from './homepage/homepage.component';
 import { LoginComponent } from './login/login.component';
 import { LoginService } from './login/login.service';
 import { MatCardModule } from '@angular/material/card'; // Import MatCardModule
-import { MatIconModule } from '@angular/material/icon'; // Import MatIconModule
+import { MatIconModule } from '@angular/material/icon';
+import { ProfileComponent } from './profile/profile.component'; // Import MatIconModule
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { MatIconModule } from '@angular/material/icon'; // Import MatIconModule
     AdvertismentComponent,
     RegistrationComponent,
     LoginComponent,
-    HomePageComponent // <-- add this    
+    HomePageComponent,
+    ProfileComponent // <-- add this    
   ],
   
   imports: [
