@@ -24,14 +24,15 @@ export class RegistrationComponent implements OnInit {
   onSubmit() {
     if (this.registrationForm.valid) {
       this.registrationService.register(this.registrationForm.value)
-        .subscribe(
-          response => {
-            console.log(response);
-          },
-          error => {
-            console.log(error);
-          }
-        );
+      .subscribe(
+        response => {
+          // Navigate to login page or show success message
+        },
+        error => {
+          // Show error message to user
+        }
+      );
+    
     }
   }
   
