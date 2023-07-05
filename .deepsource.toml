@@ -1,17 +1,13 @@
 version = 1
 
 [[analyzers]]
-name = "sql"
-
-[[analyzers]]
 name = "javascript"
 
   [analyzers.meta]
-  plugins = ["angular"]
+  plugins = ["angularjs"]
   environment = [
     "nodejs",
-    "mongo"
+    "browser",
+    "mongo",
+    "jquery"
   ]
-
-[[analyzers]]
-name = "shell"
