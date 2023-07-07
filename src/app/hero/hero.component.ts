@@ -3,25 +3,25 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-hero',
   templateUrl: './hero.component.html',
-  styleUrls: ['./hero.component.css']
+  styleUrls: ['./hero.component.css'],
 })
 export class HeroComponent {
   advertisers = [
     {
       id: 1,
       name: 'Advertiser 1',
-      online: true
+      online: true,
     },
     {
       id: 2,
       name: 'Advertiser 2',
-      online: false
+      online: false,
     },
     {
       id: 3,
       name: 'Advertiser 3',
-      online: true
-    }
+      online: true,
+    },
   ];
 
   startChat(advertiserId: number) {

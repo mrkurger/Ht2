@@ -4,13 +4,15 @@ import { HttpClient } from '@angular/common/http';
 import { tap } from 'rxjs/operators';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AuthService {
   private currentUserSubject: BehaviorSubject<any>;
 
   constructor(private http: HttpClient) {
-    this.currentUserSubject = new BehaviorSubject<any>(this.getUserFromLocalStorage());
+    this.currentUserSubject = new BehaviorSubject<any>(
+      this.getUserFromLocalStorage()
+    );
   }
 
   public get currentUser(): Observable<any> {
@@ -27,7 +29,7 @@ export class AuthService {
 
   login(credentials: any): Observable<any> {
     return this.http.post<any>('/api/login', credentials).pipe(
-      tap(user => {
+      tap((user) => {
         localStorage.setItem('currentUser', JSON.stringify(user));
         this.currentUserSubject.next(user);
       })
