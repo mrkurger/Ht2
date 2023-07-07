@@ -1,16 +1,32 @@
 <div class="container hero-container">
-    <h1 class="hero-title">Professional Cleaning Services</h1>
-    <div class="row">
-      <div class="col-md-4 mb-3" *ngFor="let advertiser of advertisers">
-        <div class="card">
-          <img class="card-img-top" src="src/app/img/300x200.png" alt="Cleaning Service">
-          <div class="card-body">
-            <h5 class="card-title">{{ advertiser.name }} <span *ngIf="advertiser.online" class="online-status">(Online)</span></h5>
-            <p class="card-text">We offer a range of professional cleaning services to keep your home or office sparkling clean. Our team of experienced cleaners uses the latest cleaning equipment and techniques to leave your space looking fresh and tidy.</p>
-            <a href="#" class="btn btn-primary" (click)="startChat(advertiser.id)">Start Chat</a>
-            <a href="#" class="btn btn-secondary">Book Now</a>
-          </div>
+  <h1 class="hero-title">Professional Cleaning Services</h1>
+  <div class="row">
+    <div class="col-md-4 mb-3" *ngFor="let advertiser of advertisers">
+      <div class="card">
+        <img
+          class="card-img-top"
+          src="src/app/img/300x200.png"
+          alt="Cleaning Service"
+        />
+        <div class="card-body">
+          <h5 class="card-title">
+            {{ advertiser.name }}
+            <span *ngIf="advertiser.online" class="online-status"
+              >(Online)</span
+            >
+          </h5>
+          <p class="card-text">
+            We offer a range of professional cleaning services to keep your home
+            or office sparkling clean. Our team of experienced cleaners uses the
+            latest cleaning equipment and techniques to leave your space looking
+            fresh and tidy.
+          </p>
+          <a href="#" class="btn btn-primary" (click)="startChat(advertiser.id)"
+            >Start Chat</a
+          >
+          <a href="#" class="btn btn-secondary">Book Now</a>
         </div>
       </div>
     </div>
   </div>
+</div>

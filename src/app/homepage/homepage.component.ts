@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   template: `
     <app-advertisment></app-advertisment>
     <!-- More of your home page view here -->
-  `
+  `,
 })
-export class HomePageComponent { }
+export class HomePageComponent {}
