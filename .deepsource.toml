@@ -1,6 +1,9 @@
 version = 1
 
 [[analyzers]]
+name = "secrets"
+
+[[analyzers]]
 name = "test-coverage"
 
 [[analyzers]]
@@ -9,7 +12,9 @@ name = "javascript"
   [analyzers.meta]
   plugins = [
     "angularjs",
-    "angular"
+    "angular",
+    "vue",
+    "react"
   ]
   environment = [
     "nodejs",
