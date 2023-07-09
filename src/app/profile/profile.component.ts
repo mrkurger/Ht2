@@ -9,7 +9,7 @@ import { AuthService } from '../services/auth.service';
   selector: 'app-profile',
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.css'],
-  providers: [FavoritesService]
+  providers: [FavoritesService],
 })
 export class ProfileComponent implements OnInit {
   advertiserId!: string;
@@ -21,11 +21,11 @@ export class ProfileComponent implements OnInit {
     private route: ActivatedRoute,
     private advertismentService: AdvertismentService,
     private favoritesService: FavoritesService,
-    private authService: AuthService
+    private authService: AuthService,
   ) {}
 
   ngOnInit() {
-    this.route.paramMap.subscribe(params => {
+    this.route.paramMap.subscribe((params) => {
       const id = params.get('id');
       if (id) {
         this.advertiserId = id;
@@ -46,11 +46,9 @@ export class ProfileComponent implements OnInit {
       (error: any) => {
         console.error('Error fetching advertiser:', error);
         // Add error handling logic or show an error message to the user
-      }
+      },
     );
   }
-  
-  
 
   calculateDistance() {
     // Implement the logic to calculate the distance between user and advertiser
@@ -68,16 +66,18 @@ export class ProfileComponent implements OnInit {
 
       const userId = user.id;
 
-      this.favoritesService.updateFavorites(userId, this.advertiserId).subscribe(
-        () => {
-          console.log('Ad added to favorites');
-          // Implement any additional logic after successfully updating the favorites
-        },
-        (error) => {
-          console.error('Error adding ad to favorites:', error);
-          // Implement error handling logic or show an error message to the user
-        }
-      );
+      this.favoritesService
+        .updateFavorites(userId, this.advertiserId)
+        .subscribe(
+          () => {
+            console.log('Ad added to favorites');
+            // Implement any additional logic after successfully updating the favorites
+          },
+          (error) => {
+            console.error('Error adding ad to favorites:', error);
+            // Implement error handling logic or show an error message to the user
+          },
+        );
     });
   }
 

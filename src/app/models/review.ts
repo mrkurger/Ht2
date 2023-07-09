@@ -1,5 +1,4 @@
 export interface Review {
-    content: string;
-    score: number;
-  }
-  
+  content: string;
+  score: number;
+}

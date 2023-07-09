@@ -1,5 +1,5 @@
 @import "~bootstrap/dist/css/bootstrap.css";
-@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
 
 body {
   margin: 0;
@@ -24,8 +24,6 @@ header {
   flex: 1; /* Allow the main content to expand and fill the remaining vertical space */
   padding: 20px;
 }
-
-
 
 .poster-grid {
   display: grid;

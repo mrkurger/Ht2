@@ -22,7 +22,6 @@ import { MatCardModule } from '@angular/material/card'; // Import MatCardModule
 import { MatIconModule } from '@angular/material/icon';
 import { ProfileComponent } from './profile/profile.component'; // Import MatIconModule
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,9 +31,9 @@ import { ProfileComponent } from './profile/profile.component'; // Import MatIco
     RegistrationComponent,
     LoginComponent,
     HomePageComponent,
-    ProfileComponent // <-- add this    
+    ProfileComponent, // <-- add this
   ],
-  
+
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -47,9 +46,9 @@ import { ProfileComponent } from './profile/profile.component'; // Import MatIco
     MatInputModule,
     MatSelectModule,
     MatCardModule,
-    MatIconModule
+    MatIconModule,
   ],
-  providers: [AdvertismentService,RegistrationService,LoginService],
-  bootstrap: [AppComponent]
+  providers: [AdvertismentService, RegistrationService, LoginService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
