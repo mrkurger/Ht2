@@ -14,7 +14,7 @@ export class AdvertismentService {
 
   getAdvertiser(advertiserId: string): Observable<any> {
     return this.http.get<any>(
-      `http://localhost:3000/api/accounts/${advertiserId}`
+      `http://localhost:3000/api/accounts/${advertiserId}`,
     );
   }
 }

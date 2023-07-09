@@ -12,7 +12,7 @@ export class RegistrationComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private registrationService: RegistrationService
+    private registrationService: RegistrationService,
   ) {} // Inject your service
 
   ngOnInit() {
@@ -32,7 +32,7 @@ export class RegistrationComponent implements OnInit {
         },
         (error) => {
           // Show error message to user
-        }
+        },
       );
     }
   }

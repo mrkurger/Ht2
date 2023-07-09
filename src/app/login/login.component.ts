@@ -12,7 +12,7 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private loginService: LoginService
+    private loginService: LoginService,
   ) {}
 
   ngOnInit() {
@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
         (error) => {
           console.log(error);
           // Handle the error, like showing an error message
-        }
+        },
       );
     }
   }
