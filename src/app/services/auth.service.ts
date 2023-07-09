@@ -11,7 +11,7 @@ export class AuthService {
 
   constructor(private http: HttpClient) {
     this.currentUserSubject = new BehaviorSubject<any>(
-      this.getUserFromLocalStorage()
+      this.getUserFromLocalStorage(),
     );
   }
 
@@ -32,7 +32,7 @@ export class AuthService {
       tap((user) => {
         localStorage.setItem('currentUser', JSON.stringify(user));
         this.currentUserSubject.next(user);
-      })
+      }),
     );
   }
 

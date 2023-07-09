@@ -21,7 +21,7 @@ export class ProfileComponent implements OnInit {
     private route: ActivatedRoute,
     private advertismentService: AdvertismentService,
     private favoritesService: FavoritesService,
-    private authService: AuthService
+    private authService: AuthService,
   ) {}
 
   ngOnInit() {
@@ -46,7 +46,7 @@ export class ProfileComponent implements OnInit {
       (error: any) => {
         console.error('Error fetching advertiser:', error);
         // Add error handling logic or show an error message to the user
-      }
+      },
     );
   }
 
@@ -76,7 +76,7 @@ export class ProfileComponent implements OnInit {
           (error) => {
             console.error('Error adding ad to favorites:', error);
             // Implement error handling logic or show an error message to the user
-          }
+          },
         );
     });
   }

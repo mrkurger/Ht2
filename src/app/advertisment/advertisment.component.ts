@@ -12,20 +12,20 @@ export class AdvertismentComponent {
 
   constructor(
     private advertismentService: AdvertismentService,
-    private router: Router
+    private router: Router,
   ) {}
 
   ngOnInit() {
     this.advertismentService.getAdvertisers().subscribe(
       (data: any[]) => {
         this.advertisements = data.filter(
-          (account) => account.accountType === 'advertisers'
+          (account) => account.accountType === 'advertisers',
         );
       },
       (error) => {
         console.error('Error fetching advertisers:', error);
         // Add error handling logic or show an error message to the user
-      }
+      },
     );
   }
 
