@@ -1,0 +1,9 @@
+<!-- rules/dont-log-customer-data.md -->
+
+Fail if we're logging customer data or we'll lose our SOC2 certification.
+                  
+This is bad:
+console.log(user);
+
+This is probably fine:
+console.log("user id: " + user.id);
