@@ -5,26 +5,15 @@ name = "javascript"
 
   [analyzers.meta]
   plugins = [
-    "react",
     "angular",
-    "vue",
     "angularjs"
   ]
   environment = [
-    "browser",
     "nodejs",
-    "jquery",
-    "mongo"
+    "browser",
+    "mongo",
+    "jquery"
   ]
-
-[[analyzers]]
-name = "java"
-
-  [analyzers.meta]
-  runtime_version = "11"
-
-[[transformers]]
-name = "prettier"
 
 [[transformers]]
 name = "standardjs"
