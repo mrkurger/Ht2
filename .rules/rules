@@ -1,0 +1,13 @@
+mkdir .rules;
+touch .rules/prevent-customer-logs.md;
+
+# Add some content
+cat > .rules/prevent-customer-logs.md <<- EOM
+# Fail if we're logging customer data or we'll lose our SOC2 certification.
+                  
+This is bad:
+console.log(user);
+
+This is probably fine:
+console.log("user id: " + user.id);" >> .rules/prevent-customer-logs.md
+EOM
